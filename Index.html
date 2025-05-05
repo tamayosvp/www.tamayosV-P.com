@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAMAYO'S V&P</title>
+
+  <!-- Ícono del sitio -->
+  <link rel="icon" href="icono.png" type="image/png">
+  <link rel="apple-touch-icon" href="icono.png">
+
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    @media (max-width: 600px) {
+  .item img {
+    max-height: none;
+    height: auto;
+    width: 100%;
+  }
+
+  .item {
+    padding: 0.5rem;
+  }
+}
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Anton', sans-serif;
+      background-color: #1c1c1c;
+      color: white;
+    }
+
+    header {
+      background-color: #000;
+      color: #ff6600;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #111;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ff6600;
+      text-decoration: none;
+      font-family: 'Anton', sans-serif;
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #ff6600;
+      padding-bottom: 0.5rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    .menu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .item {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .item img {
+      max-width: 100%;
+      max-height: 150px;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+      object-fit: cover;
+    }
+
+    .item-title {
+      font-size: 1.3rem;
+      color: #ff6600;
+      margin-bottom: 0.2rem;
+    }
+
+    .item-price {
+      color: #ff9933;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .item-desc {
+      font-family: Arial, sans-serif;
+      color: #ddd;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #1c1c1c, #111);
+      cursor: default;
+    }
+
+    h2 {
+      text-shadow: 0 0 8px #ff6600;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 102, 0, 0.7); }
+      70% { transform: scale(1.1); box-shadow: 0 0 15px rgba(255, 102, 0, 0.7); }
+      100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 102, 0, 0); }
+    }
+
+    a[href*="wa.me"] img {
+      animation: pulse 2s infinite;
+    }
+
+    nav {
+      box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      .item-desc, .item-title {
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    a:hover {
+      cursor: pointer;
+    }
+    #menu-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+  </style>
+</head>
+<body>
+  <div id="menu-icon" onclick="mostrarMenu()">
+    <img src="logow.png" alt="Menú" style="width: 40px; height: 40px;">
+  </div>
+  
+  <header>TAMAYO'S V&P</header>
+  <div class="item" data-aos="zoom-in" data-aos-delay="100">
+
+  <!-- Botones de Navegación -->
+  <nav>
+    <a href="#hamburguesas">Hamburguesas</a>
+    <a href="#algo-mas">Algo Más</a>
+    <a href="#bebidas">Bebidas</a>
+    <a href="#alitas">Alitas</a>
+    <a href="#ensaladas">Ensaladas</a>
+  </nav>
+
+  <!-- MENÚ HAMBURGUESAS -->
+  <section id="hamburguesas">
+    <h2>Menú Hamburguesas</h2>
+    <div class="menu-grid">
+      <div class="column">
+        <div class="item">
+          <img src="especial.png" alt="Especial">
+          <div class="item-title">ESPECIAL</div>
+          <div class="item-price">$75</div>
+          <div class="item-desc">Pan brioche, pollo crujiente, aderezo de la casa, aros de cebolla crujientes, lechuga, jitomate, pepinillos y catsup.</div>
+        </div>
+        <div class="item">
+          <img src="bañada.png" alt="Bañada">
+          <div class="item-title">BAÑADA</div>
+          <div class="item-price">$75</div>
+          <div class="item-desc">Pollo crujiente bañado en la salsa de tu preferencia, ranch, lechuga italiana, jitomate, pepinillos y catsup.</div>
+        </div>
+        <div class="item">
+          <img src="jalapeñoche.png" alt="Jalapeño Cheddar">
+          <div class="item-title">Jalapeño Cheddar</div>
+          <div class="item-price">$75</div>
+          <div class="item-desc">Res, queso cheddar, chiles jalapeños, lechuga italiana, jitomate, mayonesa y catsup.</div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="item">
+          <img src="clasicas.png" alt="Clásica">
+          <div class="item-title">CLÁSICAS</div>
+          <div class="item-price">$60</div>
+          <div class="item-desc">Res o pollo, queso americano, jitomate, lechuga italiana, pepinillos, mayonesa y catsup.</div>
+        </div>
+        <div class="item">
+          <img src="combinada.png" alt="Combinada">
+          <div class="item-title">COMBINADA</div>
+          <div class="item-price">$75</div>
+          <div class="item-desc">Pollo, res, 2 quesos americanos, lechuga italiana, jitomate, pepinillos, mayonesa y catsup.</div>
+        </div>
+        <div class="item">
+          <img src="doble.png" alt="Doble">
+          <div class="item-title">DOBLE</div>
+          <div class="item-price">$75</div>
+          <div class="item-desc">Doble porción de res o pollo, 2 quesos americanos, lechuga, jitomate, pepinillos, mayonesa y catsup.</div>
+        </div>
+        <div class="item">
+          <img src="crujiente.png" alt="Crujiente">
+          <div class="item-title">CRUJIENTE</div>
+          <div class="item-price">$70</div>
+          <div class="item-desc">Pollo crujiente, queso americano, lechuga, jitomate, pepinillos, mayonesa y catsup.</div>
+        </div>
+        <div class="item">
+          <img src="rescontocino.png" alt="Res con tocino">
+          <div class="item-title">Res con tocino</div>
+          <div class="item-price">$70</div>
+          <div class="item-desc">Res, tocino, queso americano, lechuga italiana, jitomate, pepinillos, mayonesa y catsup</div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="item">
+          <img src="hawaiana.png" alt="Hawaiana">
+          <div class="item-title">HAWAIANA</div>
+          <div class="item-price">$70</div>
+          <div class="item-desc">Res, queso americano, piña, lechuga italiana, pepinillos, mayonesa y catsup.</div>
+        </div>
+        <div class="item">
+          <img src="habanerores.png" alt="Habanero Res">
+          <div class="item-title">HABANERO RES</div>
+          <div class="item-price">$80</div>
+          <div class="item-desc">Pan brioche, res, aderezo de la casa, queso manchego, salsa habanero, tocino, lechuga italiana, jitomate, pepinillos y catsup.</div>
+        </div>
+        <div class="item">
+          <img src="española.png" alt="Española">
+          <div class="item-title">Española</div>
+          <div class="item-price">$80</div>
+          <div class="item-desc">Pan brioche, pollo crujiente, aderezo de la casa, queso manchego, tocino, lechuga, pepinillos, jitomate, mayonesa y catsup.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ALGO MÁS Y BEBIDAS JUNTOS -->
+  <section id="algo-mas">
+    <h2 data-aos="fade-up">ALGO MÁS</h2>
+    <div class="menu-grid">
+      <div class="column" data-aos="fade-right">
+        <div class="item"><img src="dedosq.png" alt="Dedos de Queso"><div class="item-title">DEDOS DE QUESO</div><div class="item-price">$50</div></div>
+        <div class="item"><img src="aros.png" alt="Aros de Cebolla"><div class="item-title">AROS DE CEBOLLA</div><div class="item-price">$40</div></div>
+        <div class="item"><img src="papas.png" alt="Papas Fritas"><div class="item-title">PAPAS FRITAS</div><div class="item-price">$40</div></div>
+        <div class="item"><img src="papaslemon.png" alt="Papas Lemon Pepper"><div class="item-title">PAPAS LEMON PEPPER</div><div class="item-price">$45</div></div>
+        <div class="item"><img src="salchi.png" alt="Salchipapas"><div class="item-title">SALCHIPAPAS</div><div class="item-price">$45</div></div>
+        <div class="item"><img src="papagajo.png" alt="Papas Gajo"><div class="item-title">PAPAS GAJO</div><div class="item-price">$45</div></div>
+        <div class="item"><img src="tiraspollo.png" alt="Tiras de Pollo"><div class="item-title">TIRAS DE POLLO</div><div class="item-price">$70</div><div class="item-desc">Tiras con salsa: $80<br>Tiras con papas: $85</div></div>
+      </div>
+
+      <div class="column" data-aos="fade-left" id="bebidas">
+        <h2>BEBIDAS</h2>
+        <div class="item"><div class="item-title">REFRESCOS</div><div class="item-desc">Coca, Coca Zero, Pepsi, Sprite, Fanta</div></div>
+        <div class="item"><div class="item-title">AGUAS</div><div class="item-desc">Naranjada, Limonada, Agua natural, Agua mineral</div></div>
+        <div class="item"><div class="item-title">JUGOS</div><div class="item-desc">Mango, Durazno, Manzana</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ALITAS Y ENSALADAS -->
+  <section id="alitas">
+    <h2 data-aos="fade-up">ALITAS Y ENSALADAS</h2>
+    <div class="menu-grid">
+      <div class="column" data-aos="fade-right">
+        <div class="item">
+          <img src="alitas1.png" alt="Alitas">
+          <div class="item-title">ALITAS Y BONELESS</div>
+          <div class="item-desc">
+            <ul style="text-align: left; font-family: Arial; color: #ddd;">
+              <li>6 ALITAS - $90</li>
+              <li>10 ALITAS - $137</li>
+              <li>15 ALITAS - $197</li>
+              <li>20 ALITAS - $267</li>
+              <li>250gr. BONELESS - $85</li>
+            </ul>
+            <strong>Salsas:</strong>
+            <ul style="text-align: left; font-family: Arial; color: #ddd;">
+              <li>Habanero</li>
+              <li>Mango Habanero</li>
+              <li>Búfalo</li>
+              <li>Chipotle</li>
+              <li>BBQ Hot</li>
+              <li>Chile y Limón</li>
+              <li>Lemon Pepper</li>
+              <li>Naranja</li>
+              <li>BBQ</li>
+            </ul>
+            <img src="escalapicoso.png" alt="Escala de picante" style="width: 100%; max-width: 100px; margin-top: 10px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="column" data-aos="fade-left" id="ensaladas">
+        <div class="item"><img src="ensaladabufalo.png" alt="Bufalo"><div class="item-title">BUFALO</div><div class="item-price">$75</div><div class="item-desc">Lechuga italiana, zanahoria, pepino, jícama, 130gr. de pollo bañado en salsa búfalo, crutones y aderezo ranch.</div></div>
+        <div class="item"><img src="ensaladatropical.png" alt="Tropical"><div class="item-title">TROPICAL</div><div class="item-price">$80</div><div class="item-desc">Lechuga italiana, fresa, manzana, nuez, queso parmesano, 130gr. de pollo, crutones y aderezo ranch.</div></div>
+        <div class="item"><img src="ensaladaranch.png" alt="Ranch"><div class="item-title">RANCH</div><div class="item-price">$85</div><div class="item-desc">Lechuga italiana, jitomate, aguacate, cebolla morada, queso panela, pollo/atún, crutones y aderezo ranch.</div></div>
+        <div class="item"><img src="ensaladaburguer.png" alt="Ensalada Burger"><div class="item-title">ENSALADA BURGER</div><div class="item-price">$70</div><div class="item-desc">(Hamburguesa sin pan) Lechuga italiana, jitomate, cebolla morada, pepinillos, 130gr. de res y aderezo de la casa.</div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    © 2025 TAMAYO'S V&P | ¡Delicias que conquistan!
+  </footer>
+
+  <!-- Script AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+<script>
+  window.addEventListener('scroll', function() {
+    const icono = document.getElementById('menu-icon');
+    if (window.scrollY > 100) {
+      icono.style.display = 'block';
+    } else {
+      icono.style.display = 'none';
+    }
+  });
+
+  function mostrarMenu() {
+  const numero = '5214131150344'; // Coloca aquí el número con código de país (sin signos ni espacios)
+  const mensaje = 'Hola, me gustaría más información.'; // Mensaje opcional
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
+}
+
+</script>
+
+</html>
