@@ -17,6 +17,21 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+
+    .item img {
+  width: 100%;
+  height: auto;
+  max-height: 250px; /* Limita la altura */
+  object-fit: cover; /* Recorta un poco si es muy alta */
+  border-radius: 1rem;
+}
+
+@media (max-width: 600px) {
+  .item img {
+    max-height: 200px; /* más pequeño en celulares */
+  }
+}
+
     @media (max-width: 600px) {
   .item img {
     max-height: none;
