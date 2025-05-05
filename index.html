@@ -16,6 +16,12 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -45,7 +51,7 @@
     /* Para pantallas pequeñas como celulares */
     @media (max-width: 600px) {
       .card img {
-        width: 250px;   /* Ancho fijo más pequeño */
+        width: 250px;
         height: auto;
         display: block;
         margin: 0 auto;
@@ -57,7 +63,9 @@
       }
     }
 
-    html {
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
       scroll-behavior: smooth;
     }
 
@@ -74,6 +82,7 @@
       padding: 1rem;
       text-align: center;
       font-size: 2rem;
+      width: 100%;
     }
 
     nav {
@@ -83,6 +92,7 @@
       background-color: #111;
       padding: 1rem;
       flex-wrap: wrap;
+      width: 100%;
     }
 
     nav a {
@@ -98,6 +108,8 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+      width: 100%;
+      max-width: 100%;
     }
 
     h2 {
@@ -132,6 +144,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
     }
 
     .item:hover {
@@ -170,6 +183,7 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+      width: 100%;
     }
 
     body {
@@ -216,35 +230,17 @@
     a:hover {
       cursor: pointer;
     }
-    
-    #menu-icon {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      background-color: white;
-      padding: 10px;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      display: none;
-      cursor: pointer;
-      z-index: 999;
-    }
   </style>
 </head>
 <body>
-  <!-- Botón de WhatsApp siempre visible -->
+  <!-- Botón de WhatsApp único -->
   <div class="whatsapp-float">
     <a href="https://wa.me/5214131150344?text=Hola,%20me%20gustaría%20más%20información." target="_blank">
       <img src="logow.png" alt="WhatsApp">
     </a>
   </div>
   
-  <div id="menu-icon" onclick="mostrarMenu()">
-    <img src="logow.png" alt="Menú" style="width: 40px; height: 40px;">
-  </div>
-  
   <header>TAMAYO'S V&P</header>
-  <div class="item" data-aos="zoom-in" data-aos-delay="100">
 
   <!-- Botones de Navegación -->
   <nav>
@@ -409,24 +405,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
-  
-  <script>
-    window.addEventListener('scroll', function() {
-      const icono = document.getElementById('menu-icon');
-      if (window.scrollY > 100) {
-        icono.style.display = 'block';
-      } else {
-        icono.style.display = 'none';
-      }
-    });
-
-    function mostrarMenu() {
-      const numero = '5214131150344';
-      const mensaje = 'Hola, me gustaría más información.';
-      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, '_blank');
-    }
   </script>
 </body>
 </html>
