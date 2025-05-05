@@ -9,7 +9,6 @@
   <link rel="icon" href="icono.png" type="image/png">
   <link rel="apple-touch-icon" href="icono.png">
 
-
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
@@ -17,37 +16,46 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
- .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
 
-.whatsapp-float img {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
-}
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
 
+    .whatsapp-float img:hover {
+      transform: scale(1.1);
+    }
 
-  /* Estilo base para las imágenes */
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
+    /* Estilo base para las imágenes */
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-/* Para pantallas pequeñas como celulares */
-@media (max-width: 600px) {
-  .card img {
-    width: 250px;   /* Ancho fijo más pequeño */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-}
+    /* Para pantallas pequeñas como celulares */
+    @media (max-width: 600px) {
+      .card img {
+        width: 250px;   /* Ancho fijo más pequeño */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      
+      .whatsapp-float img {
+        width: 45px;
+        height: 45px;
+      }
+    }
 
     html {
       scroll-behavior: smooth;
@@ -186,7 +194,7 @@
       100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 102, 0, 0); }
     }
 
-    a[href*="wa.me"] img {
+    .whatsapp-float img {
       animation: pulse 2s infinite;
     }
 
@@ -208,22 +216,29 @@
     a:hover {
       cursor: pointer;
     }
+    
     #menu-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: white;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  display: none;
-  cursor: pointer;
-  z-index: 999;
-}
-
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: none;
+      cursor: pointer;
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
+  <!-- Botón de WhatsApp siempre visible -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/5214131150344?text=Hola,%20me%20gustaría%20más%20información." target="_blank">
+      <img src="logow.png" alt="WhatsApp">
+    </a>
+  </div>
+  
   <div id="menu-icon" onclick="mostrarMenu()">
     <img src="logow.png" alt="Menú" style="width: 40px; height: 40px;">
   </div>
@@ -386,8 +401,6 @@
     </div>
   </section>
 
-
-
   <footer>
     © 2025 TAMAYO'S V&P | ¡Delicias que conquistan!
   </footer>
@@ -397,24 +410,23 @@
   <script>
     AOS.init();
   </script>
-</body>
-<script>
-  window.addEventListener('scroll', function() {
-    const icono = document.getElementById('menu-icon');
-    if (window.scrollY > 100) {
-      icono.style.display = 'block';
-    } else {
-      icono.style.display = 'none';
+  
+  <script>
+    window.addEventListener('scroll', function() {
+      const icono = document.getElementById('menu-icon');
+      if (window.scrollY > 100) {
+        icono.style.display = 'block';
+      } else {
+        icono.style.display = 'none';
+      }
+    });
+
+    function mostrarMenu() {
+      const numero = '5214131150344';
+      const mensaje = 'Hola, me gustaría más información.';
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
     }
-  });
-
-  function mostrarMenu() {
-  const numero = '5214131150344'; // Coloca aquí el número con código de país (sin signos ni espacios)
-  const mensaje = 'Hola, me gustaría más información.'; // Mensaje opcional
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, '_blank');
-}
-
-</script>
-
+  </script>
+</body>
 </html>
