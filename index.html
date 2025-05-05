@@ -17,28 +17,20 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    @media (max-width: 400px) {
-  .item img {
-    max-height: none;
-    height: auto;
-    width: 50%;
-  }
-
-  .item {
-    padding: 0.5rem;
-  }
-}
-.item img {
+  /* Estilo base para las imágenes */
+.card img {
   width: 100%;
   height: auto;
-  max-height: 150px; /* Limita la altura */
-  object-fit: cover; /* Recorta un poco si es muy alta */
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 
-@media (max-width: 400px) {
-  .item img {
-    max-height: 90px; /* más pequeño en celulares */
+/* Para pantallas pequeñas como celulares */
+@media (max-width: 600px) {
+  .card img {
+    width: 250px;   /* Ancho fijo más pequeño */
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
 
