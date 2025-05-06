@@ -231,23 +231,20 @@
       cursor: pointer;
     }
 
-    header {
-  text-align: center;
-  padding: 30px 0;
-  background-color: #1c1c1c;
-}
-
-header img {
+    header img {
   max-width: 100%;
   height: auto;
+  max-height: 300px; /* Tamaño máximo para desktop */
   display: block;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 /* 📱 Ajuste para pantallas pequeñas (menos de 600px, típicas de celulares) */
 @media (max-width: 600px) {
   header img {
-   padding: 10px 0; /* más pequeño en celular */
+    max-height: 150px; /* Tamaño más pequeño para móvil */
+    padding: 10px 0;
   }
 }
 
