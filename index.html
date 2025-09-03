@@ -241,6 +241,30 @@
       cursor: pointer;
     }
 
+    .franja-patrio {
+  height: 6px;
+  background: linear-gradient(90deg, #006847 33%, #ffffff 33%, #ffffff 66%, #ce1126 66%);
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 8px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #006847, #ffffff, #ce1126);
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  border: 1px solid #ce1126; /* borde rojo sutil */
+}
+footer span {
+  color: #006847;
+}
+
+
     .combo-box {
   background-color: #ffe8cc;
   border: 2px solid #ff8800;
@@ -283,7 +307,9 @@
       <img src="logoWh.jpg" alt="WhatsApp">
     </a>
   </div>
-  
+  <!-- Franja patriótica -->
+<div class="franja-patrio"></div>
+
   <!-- HEADER NUEVO CON LOGO Y MENÚ -->
   <header>
     <img src="LogoW.png" alt="TAMAYO'S V&P" class="logo-header">
@@ -498,7 +524,7 @@
   </section>
 
   <footer>
-    © 2025 TAMAYO'S V&P | ¡Delicias que conquistan!
+    © 2025 TAMAYO'S V&P | ¡Delicias que conquistan! <span>¡Viva México!</span>
   </footer>
 
   <!-- Script AOS -->
@@ -508,6 +534,9 @@
   </script>
 </body>
 </html>
+
+
+
 
 
 
