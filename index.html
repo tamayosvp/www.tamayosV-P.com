@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <style>
+/* Calabazas que caen */
+.falling-pumpkins {
+  pointer-events: none; /* no interfiere con los clics */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* detrás de todo */
+}
+
+.falling-pumpkins span {
+  position: absolute;
+  top: -50px;
+  color: #ff6600;
+  font-size: 2rem;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0.8;
+  }
+}
+</style>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TAMAYO'S V&P</title>
@@ -508,8 +537,24 @@
   <script>
     AOS.init();
   </script>
+  <!-- Contenedor de calabazas -->
+<div class="falling-pumpkins"></div>
+<script>
+  const container = document.querySelector('.falling-pumpkins');
+  const pumpkins = ['🎃','🦇','🍂']; // puedes poner más emojis
+  for (let i = 0; i < 20; i++) { // cantidad
+    const span = document.createElement('span');
+    span.textContent = pumpkins[Math.floor(Math.random()*pumpkins.length)];
+    span.style.left = Math.random()*100 + 'vw';
+    span.style.animationDuration = (Math.random()*5 + 5) + 's'; // velocidad
+    span.style.fontSize = (Math.random()*1.5 + 1.2) + 'rem'; // tamaño
+    container.appendChild(span);
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
