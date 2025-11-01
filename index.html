@@ -1,35 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <style>
-/* Calabazas que caen */
-.falling-pumpkins {
-  pointer-events: none; /* no interfiere con los clics */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0; /* detrás de todo */
-}
-
-.falling-pumpkins span {
-  position: absolute;
-  top: -50px;
-  color: #ff6600;
-  font-size: 2rem;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-    opacity: 0.8;
-  }
-}
-</style>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TAMAYO'S V&P</title>
@@ -303,23 +274,6 @@
   50% { transform: scale(1.03); box-shadow: 0 0 15px rgba(255, 136, 0, 0.7); }
   100% { transform: scale(1); box-shadow: 0 0 8px rgba(255, 136, 0, 0.4); }
 }
-/* Bandera de descuento */
-.discount-flag {
-  position: absolute;
-  top: 10px;
-  left: -10px;
-  background: #e60000; /* rojo fuerte */
-  color: #fff;
-  padding: 5px 15px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  font-family: 'Anton', sans-serif;
-  text-transform: uppercase;
-  transform: rotate(-10deg);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  border-radius: 0 5px 5px 0;
-  z-index: 10;
-}
 
   </style>
 </head>
@@ -351,13 +305,11 @@
       <div class="column">
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="especialn.png" alt="Especial">
   </div>
   <div class="item-title">ESPECIAL</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$80</span>
-    <span style="color: #e60000; font-weight:bold;"> $72</span>
   </div>
   <div class="combo-box">
     🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -368,13 +320,11 @@
         </div>
        <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="bañadan.png" alt="Bañada">
   </div>
   <div class="item-title">BAÑADA</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$75</span>
-    <span style="color: #e60000; font-weight:bold;"> $67. 50</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -385,13 +335,11 @@
         </div>
        <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="jalapeñoche.png" alt="Jalapeño Cheddar">
   </div>
   <div class="item-title">Jalapeño Cheddar</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$80</span>
-    <span style="color: #e60000; font-weight:bold;"> $72</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -406,7 +354,6 @@
         <div class="item">
   <!-- Imagen + bandera -->
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="clasicasn.png" alt="Clásica">
   </div>
 
@@ -415,7 +362,6 @@
   <!-- Precios -->
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$60</span>
-    <span style="color: #e60000; font-weight:bold;"> $54</span>
   </div>
 
   <div class="combo-box">
@@ -430,7 +376,6 @@
         <div class="item">
   <!-- Imagen + bandera -->
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="combinadan.png" alt="Combinada">
   </div>
 
@@ -439,7 +384,6 @@
   <!-- Precios -->
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$80</span>
-    <span style="color: #e60000; font-weight:bold;"> $72</span>
   </div>
 
   <div class="combo-box">
@@ -452,13 +396,11 @@
         </div>
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="doblen.png" alt="Doble">
   </div>
   <div class="item-title">DOBLE</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$80</span>
-    <span style="color: #e60000; font-weight:bold;"> $72</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -469,13 +411,11 @@
         </div>
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="crujienten.png" alt="Crujiente">
   </div>
   <div class="item-title">CRUJIENTE</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$70</span>
-    <span style="color: #e60000; font-weight:bold;"> $63</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -486,13 +426,11 @@
         </div>
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="rescontocinon.png" alt="Res con tocino">
   </div>
   <div class="item-title">RES CON TOCINO</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$70</span>
-    <span style="color: #e60000; font-weight:bold;"> $63</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -506,13 +444,11 @@
       <div class="column">
      <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="hawaianan.png" alt="Hawaiana">
   </div>
   <div class="item-title">HAWAIANA</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$70</span>
-    <span style="color: #e60000; font-weight:bold;"> $63</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -523,13 +459,11 @@
         </div>
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="habanerores.png" alt="Habanero Res">
   </div>
   <div class="item-title">HABANERO RES</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$80</span>
-    <span style="color: #e60000; font-weight:bold;"> $72</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -540,13 +474,11 @@
         </div>
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="españolan.png" alt="Española">
   </div>
   <div class="item-title">ESPAÑOLA</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$85</span>
-    <span style="color: #e60000; font-weight:bold;"> $76.50</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -568,41 +500,35 @@
         <div class="item"><img src="aros.png" alt="Aros de Cebolla"><div class="item-title">AROS DE CEBOLLA</div><div class="item-price">$40</div></div>
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="papas.png" alt="Papas Fritas">
   </div>
   <div class="item-title">PAPAS FRITAS</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$40</span>
-    <span style="color: #e60000; font-weight:bold;"> $36</span>
   </div>
 </div>
         <div class="item"><img src="papaslemon.png" alt="Papas Lemon Pepper"><div class="item-title">PAPAS LEMON PEPPER</div><div class="item-price">$40.50</div></div>
         <div class="item"><img src="salchi.png" alt="Salchipapas"><div class="item-title">SALCHIPAPAS</div><div class="item-price">$40.50</div></div>
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="papagajo.png" alt="Papas Gajo">
   </div>
   <div class="item-title">PAPAS GAJO</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$45</span>
-    <span style="color: #e60000; font-weight:bold;"> $40.5</span>
   </div>
 </div>
         <div class="item">
   <div style="position: relative;">
-    <span class="discount-flag">-10%</span>
     <img src="tiraspollo.png" alt="Tiras de Pollo">
   </div>
   <div class="item-title">TIRAS DE POLLO</div>
   <div class="item-price">
     <span style="text-decoration: line-through; color: #ccc;">$75</span>
-    <span style="color: #e60000; font-weight:bold;"> $67.50</span>
   </div>
   <div class="item-desc">
-    Tiras con salsa: <span style="text-decoration: line-through; color: #ccc;">$85</span> <span style="color: #e60000; font-weight:bold;">$76.50</span><br>
-    Tiras con papas: <span style="text-decoration: line-through; color: #ccc;">$95</span> <span style="color: #e60000; font-weight:bold;">$85.50</span>
+    Tiras con salsa: <span style="text-decoration: line-through; color: #ccc;">$85</span> 
+    Tiras con papas: <span style="text-decoration: line-through; color: #ccc;">$95</span> 
   </div>
 </div>
 
@@ -667,23 +593,10 @@
   <script>
     AOS.init();
   </script>
-  <!-- Contenedor de calabazas -->
-<div class="falling-pumpkins"></div>
-<script>
-  const container = document.querySelector('.falling-pumpkins');
-  const pumpkins = ['🎃','🦇','🍂']; // puedes poner más emojis
-  for (let i = 0; i < 20; i++) { // cantidad
-    const span = document.createElement('span');
-    span.textContent = pumpkins[Math.floor(Math.random()*pumpkins.length)];
-    span.style.left = Math.random()*100 + 'vw';
-    span.style.animationDuration = (Math.random()*10 + 10) + 's'; // velocidad
-    span.style.fontSize = (Math.random()*1.5 + 1.2) + 'rem'; // tamaño
-    container.appendChild(span);
-  }
-</script>
 
 </body>
 </html>
+
 
 
 
