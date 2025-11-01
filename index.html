@@ -16,6 +16,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+    
     * {
       margin: 0;
       padding: 0;
@@ -274,6 +275,22 @@
   50% { transform: scale(1.03); box-shadow: 0 0 15px rgba(255, 136, 0, 0.7); }
   100% { transform: scale(1); box-shadow: 0 0 8px rgba(255, 136, 0, 0.4); }
 }
+
+/* 🎃 Efecto Día de Muertos */
+.falling-element {
+  position: fixed;
+  top: -50px;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.9;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0.8; }
+}
+
 
   </style>
 </head>
@@ -593,6 +610,29 @@
   <script>
     AOS.init();
   </script>
+  <script>
+  // Elementos que caerán (flores y calaveritas)
+  const elementos = [
+    "💀", "🕯️", "🌼", "🦋", "💐", "🧡", "🕸️"
+  ];
+
+  function crearElemento() {
+    const el = document.createElement("div");
+    el.classList.add("falling-element");
+    el.textContent = elementos[Math.floor(Math.random() * elementos.length)];
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.fontSize = Math.random() * 24 + 16 + "px";
+    el.style.animationDuration = Math.random() * 5 + 5 + "s";
+    document.body.appendChild(el);
+
+    // Eliminar al terminar animación
+    setTimeout(() => el.remove(), 10000);
+  }
+
+  // Generar nuevos elementos cada cierto tiempo
+  setInterval(crearElemento, 400);
+</script>
+
 
 </body>
 </html>
