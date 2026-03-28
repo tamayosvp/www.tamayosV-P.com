@@ -73,15 +73,15 @@
     body {
       margin: 0;
       font-family: 'Anton', sans-serif;
-      background-color: #1c1c1c;
-      color: white;
+      background-color: #F2E8D5;
+      color: #8B5E3C;
     }
 
     /* HEADER NUEVO */
     header {
       text-align: center;
       padding: 20px 0;
-      background-color: #1c1c1c;
+      background-color: #F2E8D5;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -104,7 +104,7 @@
     }
 
     .header-menu a {
-      color: #ff6600;
+      color: #8B5E3C;
       text-decoration: none;
       font-family: 'Anton', sans-serif;
       font-size: 1.3rem;
@@ -113,7 +113,7 @@
     }
 
     .header-menu a:hover {
-      color: #ff9933;
+      color: #8B5E3C;
       text-shadow: 0 0 5px rgba(255,153,51,0.5);
     }
 
@@ -129,9 +129,9 @@
 
     h2 {
       font-size: 2rem;
-      border-bottom: 2px solid #ff6600;
+      border-bottom: 2px solid #8B5E3C;
       padding-bottom: 0.5rem;
-      color: #fff;
+      color: #F2E8D5;
       text-align: center;
     }
 
@@ -153,7 +153,7 @@
     }
 
     .item {
-      background-color: #2a2a2a;
+      background-color: #F2E8D5;
       border-radius: 10px;
       padding: 1rem;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -177,24 +177,24 @@
 
     .item-title {
       font-size: 1.3rem;
-      color: #ff6600;
+      color: #8B5E3C;
       margin-bottom: 0.2rem;
     }
 
     .item-price {
-      color: #ff9933;
+      color: #8B5E3C;
       font-weight: bold;
       margin-bottom: 0.5rem;
     }
 
     .item-desc {
       font-family: Arial, sans-serif;
-      color: #ddd;
+      color: #8B5E3C;
     }
 
     footer {
-      background-color: #000;
-      color: white;
+      background-color: #7A8B6D;
+      color: #8B5E3C;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
@@ -202,12 +202,12 @@
     }
 
     body {
-      background: linear-gradient(to bottom, #1c1c1c, #111);
+      background: linear-gradient(to bottom, #7A8B6D, #7A8B6D);
       cursor: default;
     }
 
     h2 {
-      text-shadow: 0 0 8px #ff6600;
+      text-shadow: 0 0 8px #8B5E3C;
     }
 
     @keyframes pulse {
@@ -219,6 +219,36 @@
     .whatsapp-float img {
       animation: pulse 2s infinite;
     }
+    .scroll-top {
+  position: fixed;
+  bottom: 90px; /* arriba del botón de WhatsApp */
+  right: 20px;
+  z-index: 1000;
+  background-color: #8B5E3C;
+  color: #F2E8D5;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+  transform: scale(1.1);
+}
+
+/* Cuando aparece */
+.scroll-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
     @media (max-width: 600px) {
       .item-desc, .item-title {
@@ -244,9 +274,9 @@
 
 
     .combo-box {
-  background-color: #ffe8cc;
-  border: 2px solid #ff8800;
-  color: #b34700;
+  background-color: white;
+  border: 2px solid #8B5E3C;
+  color: #8B5E3C;
   padding: 8px 12px;
   margin: 8px auto;
   border-radius: 10px;
@@ -259,7 +289,7 @@
 }
 
 .combo-box span {
-  color: #d43800;
+  color: #8B5E3C;
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -267,7 +297,7 @@
 .combo-box em {
   font-style: italic;
   font-size: 0.85rem;
-  color: #994400;
+  color: #8B5E3C;
 }
 
 @keyframes pulseCombo {
@@ -292,11 +322,11 @@
 }
 /* SECCIÓN HORARIO Y UBICACIÓN */
 #horario-ubicacion {
-  background: #1c1c1c;
-  color: #fff;
+  background: #8B5E3C;
+  color: #8B5E3C;
   padding: 2rem 1rem;
   text-align: center;
-  border-top: 2px solid #ff6600;
+  border-top: 2px solid #8B5E3C;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
 }
 
@@ -309,7 +339,7 @@
 }
 
 .info-box {
-  background: #2a2a2a;
+  background: #F2E8D5;
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
@@ -319,23 +349,23 @@
 
 .info-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(255,102,0,0.4);
+  box-shadow: 0 0 20px #8B5E3C(255,102,0,0.4);
 }
 
 .info-box h3 {
-  color: #ff6600;
+  color: #8B5E3C;
   font-size: 1.4rem;
   margin-bottom: 0.6rem;
 }
 
 .info-box p {
-  color: #ddd;
+  color: #8B5E3C;
   font-family: Arial, sans-serif;
   line-height: 1.5;
 }
 
 .info-box span {
-  color: #ff9933;
+  color: #8B5E3C;
   font-weight: bold;
 }
 
@@ -349,6 +379,10 @@
   </style>
 </head>
 <body>
+  <!-- Botón subir arriba -->
+<div class="scroll-top" onclick="scrollToTop()">
+  ⬆
+</div>
   <!-- Botón de WhatsApp único -->
   <div class="whatsapp-float">
     <a href="https://wa.me/5214131150344?text=Hola,%20me%20gustaría%20más%20información." target="_blank">
@@ -363,9 +397,11 @@
     <div class="header-menu">
       <a href="#hamburguesas">Hamburguesas</a>
       <a href="#algo-mas">Algo Más</a>
-      <a href="#bebidas">Bebidas</a>
+      <a href="#bebidass">Bebidas</a>
       <a href="#alitas">Alitas</a>
       <a href="#ensaladas">Ensaladas</a>
+      <a href="#cocteleria">Bebidas con alcohol</a>
+      <a href="#Micheladas">Micheladas</a>
     </div>
   </header>
 
@@ -380,7 +416,7 @@
   </div>
   <div class="item-title">ESPECIAL</div>
   <div class="item-price">
-    <span style="color : #d43800;">$80</span>
+    <span style="color : #8B5E3C;">$80</span>
   </div>
   <div class="combo-box">
     🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -395,7 +431,7 @@
   </div>
   <div class="item-title">BAÑADA</div>
   <div class="item-price">
-    <span style="color: #d43800;">$75</span>
+    <span style="color: #8B5E3C;">$75</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -410,7 +446,7 @@
   </div>
   <div class="item-title">Jalapeño Cheddar</div>
   <div class="item-price">
-    <span style="color: #d43800;">$80</span>
+    <span style="color: #8B5E3C;">$80</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -432,7 +468,7 @@
 
   <!-- Precios -->
   <div class="item-price">
-    <span style="color: #d43800;">$60</span>
+    <span style="color: #8B5E3C;">$60</span>
   </div>
 
   <div class="combo-box">
@@ -454,7 +490,7 @@
 
   <!-- Precios -->
   <div class="item-price">
-    <span style="color: #d43800;">$80</span>
+    <span style="color: #8B5E3C;">$80</span>
   </div>
 
   <div class="combo-box">
@@ -471,7 +507,7 @@
   </div>
   <div class="item-title">DOBLE</div>
   <div class="item-price">
-    <span style="color: #d43800;">$80</span>
+    <span style="color:#8B5E3C;">$80</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -486,7 +522,7 @@
   </div>
   <div class="item-title">CRUJIENTE</div>
   <div class="item-price">
-    <span style="color: #d43800;">$70</span>
+    <span style="color: #8B5E3C;">$70</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -501,7 +537,7 @@
   </div>
   <div class="item-title">RES CON TOCINO</div>
   <div class="item-price">
-    <span style="color: #d43800;">$70</span>
+    <span style="color: #8B5E3C;">$70</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -519,7 +555,7 @@
   </div>
   <div class="item-title">HAWAIANA</div>
   <div class="item-price">
-    <span style="color: #d43800;">$70</span>
+    <span style="color:#8B5E3C;">$70</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -534,7 +570,7 @@
   </div>
   <div class="item-title">HABANERO RES</div>
   <div class="item-price">
-    <span style="color: #d43800;">$80</span>
+    <span style="color: #8B5E3C;">$80</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -549,7 +585,7 @@
   </div>
   <div class="item-title">ESPAÑOLA</div>
   <div class="item-price">
-    <span style="color: #d43800;">$85</span>
+    <span style="color: #8B5E3C;">$85</span>
   </div>
           <div class="combo-box">
   🍔 + 🍟 + 🥤 <strong>Combo por solo <span>$25 más</span></strong><br>
@@ -575,7 +611,7 @@
   </div>
   <div class="item-title">PAPAS FRITAS</div>
   <div class="item-price">
-    <span style="color: #d43800;">$40</span>
+    <span style="color: #8B5E3C;">$40</span>
   </div>
 </div>
         <div class="item"><img src="papaslemon.png" alt="Papas Lemon Pepper"><div class="item-title">PAPAS LEMON PEPPER</div><div class="item-price">$45</div></div>
@@ -586,7 +622,7 @@
   </div>
   <div class="item-title">PAPAS GAJO</div>
   <div class="item-price">
-    <span style="color: #d43800;">$45</span>
+    <span style="color: #8B5E3C;">$45</span>
   </div>
 </div>
         <div class="item">
@@ -595,20 +631,28 @@
   </div>
   <div class="item-title">TIRAS DE POLLO</div>
   <div class="item-price">
-    <span style="color: #d43800;">$75</span>
+    <span style="color: #8B5E3C;">$75</span>
   </div>
   <div class="item-desc">
-    Tiras con salsa: <span style="color: #d43800;">$85</span> 
-    Tiras con papas: <span style="color: #d43800;">$95</span> 
+    Tiras con salsa: <span style="color: #8B5E3C;">$85</span> 
+    Tiras con papas: <span style="color: #8B5E3C;">$95</span> 
   </div>
 </div>
 
                                         
-      <div class="column" data-aos="fade-left" id="bebidas">
+      <div class="column" data-aos="fade-left" id="bebidass">
         <h2>BEBIDAS</h2>
         <div class="item"><div class="item-title">REFRESCOS</div><div class="item-desc">Coca, Coca Zero, Pepsi, Sprite, Fanta</div></div>
         <div class="item"><div class="item-title">AGUAS</div><div class="item-desc">Naranjada, Limonada, Agua natural, Agua mineral</div></div>
         <div class="item"><div class="item-title">JUGOS</div><div class="item-desc">Mango, Durazno, Manzana</div></div>
+      </div>
+      <div class="column" data-aos="fade-left" id="cocteleria">
+        <h2>BEBIDAS CON ALCOHOL</h2>
+        <div class="item"><div class="item-title">BEBIDAS</div><div class="item-desc">Mojito clásico,Mojito frutos rojos,Moscow mule,Apperol Paloma,Azulito,Tequila Sunrise</div></div>
+      </div>
+      <div class="column" data-aos="fade-left" id="Micheladas">
+        <h2>Micheladas</h2>
+        <div class="item"><div class="item-title">Micheladas</div><div class="item-desc">Natural,Tamarindo,Mango,Clamato, Tamaños: 1Litro, 1/2 Litro</div></div>
       </div>
     </div>
   </section>
@@ -622,7 +666,7 @@
           <img src="alitas1.png" alt="Alitas">
           <div class="item-title">ALITAS Y BONELESS</div>
           <div class="item-desc">
-            <ul style="text-align: left; font-family: Arial; color: #ddd;">
+            <ul style="text-align: left; font-family: Arial; color: #8B5E3C">
               <li>6 ALITAS - $90</li>
               <li>10 ALITAS - $137</li>
               <li>15 ALITAS - $197</li>
@@ -630,7 +674,7 @@
               <li>250gr. BONELESS - $90</li>
             </ul>
             <strong>Salsas:</strong>
-            <ul style="text-align: left; font-family: Arial; color: #ddd;">
+            <ul style="text-align: left; font-family: Arial; color: #8B5E3C">
               <li>Habanero</li>
               <li>Mango Habanero</li>
               <li>Búfalo</li>
@@ -669,7 +713,7 @@
     </div>
   </div>
 </section>
-    © 2026 TAMAYO'S V&P | ¡Delicias que conquistan!
+    © 2026 TAMAYO'S V&P | ¡Sabor que destaca. Calidad que se nota.!
   </footer>
 
   <!-- Script AOS -->
@@ -698,12 +742,29 @@
 
   // Generar nuevos elementos cada cierto tiempo
   setInterval(crearElemento, 400);
+  
+const scrollBtn = document.querySelector(".scroll-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
 </script>
 
 
 </body>
 </html>
-
 
 
 
